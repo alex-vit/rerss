@@ -137,6 +137,6 @@ func statusHandler(w http.ResponseWriter, r *http.Request) {
 		cpuUsage,
 		// memStat.Used/1_024/1_024, memStat.Total/1_024/1_024, memStat.UsedPercent)
 		// stats on this host are off by a 1024...
-		goMem.Alloc/1_024/1_024, sysMem.Used/1_024/1_024/1_024, sysMem.Total/1_024/1_024/1_024, sysMem.UsedPercent,
+		goMem.Sys/1_024/1_024, sysMem.Used/1_024/1_024/1_024, sysMem.Total/1_024/1_024/1_024, sysMem.UsedPercent,
 		numGos)
 }
